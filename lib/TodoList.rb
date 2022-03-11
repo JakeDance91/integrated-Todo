@@ -6,13 +6,10 @@ class TodoList
 
   def add(todo) 
     @todo_list << todo
-    # todo is an instance of Todo
-    # Returns nothing
   end
 
   def incomplete
     @todo_list
-    # Returns all non-done todos
   end
 
   def complete
@@ -33,6 +30,5 @@ class TodoList
     @todo_list.map { |task|
       task.mark_done!
     }
-    # Marks all todos as complete
   end
 end
