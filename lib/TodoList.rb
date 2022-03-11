@@ -18,10 +18,14 @@ class TodoList
   def complete
     @todo_list.each { |todo| 
       if todo.done?
-        @complete_list << todo
-        @todo_list.delete(todo)
+        @complete_list << todo 
       end 
       }
+    @todo_list.each { |todo|
+      if todo.done?
+        @todo_list.delete(todo)
+      end
+      }  
     @complete_list
   end
 

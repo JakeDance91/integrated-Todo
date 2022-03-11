@@ -1,5 +1,5 @@
 class Todo
-  def initialize(task) # task is a string
+  def initialize(task) 
     @task = task
   end
 
@@ -11,8 +11,6 @@ class Todo
   def mark_done!
     fail "Already marked as done" if @task.include? "@done"
     @task += "@done"
-    # Marks the todo as done
-    # Returns nothing
   end
 
   def done?
@@ -21,7 +19,5 @@ class Todo
     else
       return false
     end  
-    # Returns true if the task is done
-    # Otherwise, false
   end
 end
